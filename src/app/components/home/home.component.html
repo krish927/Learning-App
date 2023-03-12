@@ -1,0 +1,164 @@
+<section class="top-carousel">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <ng-container *ngFor="let item of carouselItem; let i = index">
+                <div class="carousel-item" [ngClass]="i==0 ? 'active' : ''">
+                    <img src={{item.imgUrl}} class="d-block w-100" alt="welcomebanner">
+                </div>
+            </ng-container>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<section class="home-service">
+    <div class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h1>Services Offered By <span>Us</span></h1>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
+            <ng-container *ngFor="let service of services">
+                <div class="col">
+                    <div class="p-2">
+                        <div class="single-service" routerLink={{service.pageUrl}}>
+                            <a class="overlay">
+                            <img src={{service.imgUrl}} alt={{service.name}}>
+                            <span>{{service.name}}</span>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<section class="home-cources">
+    <div class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h1>Top & Popular <span>Courses</span></h1>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3">
+            <ng-container *ngFor="let course of courses">
+                <div class="col">
+                    <div class="p-2">
+                        <div class="single-course">
+                            <div class="img-area">
+                                <img src={{course.imgUrl}} alt="">
+                            </div>
+                            <div class="content-area">
+                                <h6>{{course.title}}</h6>
+                                <p>{{course.subTitle}}</p>
+                                <div class="btn-area">
+                                    <button class="know-more-btn btn" routerLink={{course.link}}><i></i>Know
+                                        More</button>
+                                    <button class="inquiry-btn btn"
+                                        routerLink={{course.inquiryLink}}><i></i>Inquiry</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<section class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h1>About <span>us</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="title-area">
+                    <p class="title-area-title">PHOTO GALLERY</p>
+                </div>
+                <div class="second-container">
+                    <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3">
+                        <ng-container *ngFor="let image of gallery">
+                            <div class="col">
+                                <div class="single-img">
+                                    <img src={{image.imgUrl}} alt="">
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="title-area">
+                    <p class="title-area-title">WHO WE ARE</p>
+                </div>
+                <div class="second-container">
+                    <p class="title-area-title">POWER MIND TECHNOLOGIES</p>
+                    <p class="normal-text">Power Mind Technologies (PMT) is a leading global consulting and technology Services Company specialized in industry specific solutions & integration and conducts Vocational, Corporate and comprehensive technical IT training to the professionals on leading IT Technologies since 2014.</p>
+                    <p class="normal-text">We conduct various training for working IT/ITES/Non-IT professionals so that they can enhance their skills through our various value added training programs.</p>
+                    <button class="btn extra">Know More...</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="title-area">
+                    <p class="title-area-title">PLACEMENT UPDATES</p>
+                </div>
+                <div class="second-container">
+                    <ng-container *ngFor="let placement of placementLink">
+                        <div class="placement-event">
+                            <div class="date-area">
+                                <span>{{placement.eventDate}}</span>
+                                <p>{{placement.monthYear}}</p>
+                            </div>
+                            <div class="link-area">
+                                <p>{{placement.title}}</p>
+                                <p>{{placement.text}}</p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-service">
+    <div class="container">
+        <div class="row">
+            <div class="section-heading">
+                <h1>Building Educational <span>Envirnoment</span></h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <ng-container *ngFor="let box of boxes">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="box-img">
+                            <img src={{box.imgUrl}} alt="">
+                        </div>
+                        <div class="box-content">
+                            <h6>{{box.heading}}</h6>
+                            <p>{{box.text}}</p>
+                        </div>
+                        <div class="box-btn">
+                            <button class="btn">{{box.btnText}}</button>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+
