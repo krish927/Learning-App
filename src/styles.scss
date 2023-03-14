@@ -12,7 +12,8 @@ $error: rgb(255,0,51);
 .error{
     color: $error;
     position: absolute;
-    transform: translate(-50%,-50%);
-    top: 90%;
-    left: 15%;
+    // transform: translate(-50%,-50%);
+    // top: 90%;
+    // left: 15%;
+    font-size: 12px;
 }

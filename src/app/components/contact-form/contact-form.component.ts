@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  selector: 'app-contact-form',
+  templateUrl: './contact-form.component.html',
+  styleUrls: ['./contact-form.component.scss']
 })
-export class ContactUsComponent implements OnInit {
-contactForm:FormGroup;
+export class ContactFormComponent implements OnInit {
+
+  contactForm:FormGroup;
 submitted:boolean = false;
   constructor(private _fb:FormBuilder) { }
 

@@ -8,9 +8,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  contactForm:FormGroup;
-submitted:boolean = false;
-  constructor(private _fb:FormBuilder) { }
+//   contactForm:FormGroup;
+// submitted:boolean = false;
+  // constructor(private _fb:FormBuilder) { }
+  constructor() { }
   
   carouselItem = [
     {
@@ -162,6 +163,55 @@ submitted:boolean = false;
       link: '',
       inquiryLink: ''
     },
+    {
+      imgUrl: 'assets/images/courses/angular.png',
+      title: 'ANGULAR',
+      subTitle: '',
+      link: '',
+      inquiryLink: ''
+    },  
+    {
+      imgUrl: 'assets/images/courses/react.png',
+      title: 'REACT',
+      subTitle: '',
+      link: '',
+      inquiryLink: ''
+    },
+    {
+      imgUrl: 'assets/images/courses/tally.png',
+      title: 'TALLY9',
+      subTitle: '',
+      link: '',
+      inquiryLink: ''
+    },
+    {
+      imgUrl: 'assets/images/courses/iot.jpg',
+      title: 'IOT',
+      subTitle: '',
+      link: '',
+      inquiryLink: ''
+    },
+    {
+      imgUrl: 'assets/images/courses/machine.jpg',
+      title: 'Machine learning',
+      subTitle: '',
+      link: '',
+      inquiryLink: ''
+    },
+    {
+      imgUrl: 'assets/images/courses/deep.png',
+      title: 'Deep Learning',
+      subTitle: '',
+      link: '',
+      inquiryLink: ''
+    },
+    {
+      imgUrl: 'assets/images/courses/ai.jpg',
+      title: 'Artificial Intelligence',
+      subTitle: '',
+      link: '',
+      inquiryLink: ''
+    },
   ]
 
   gallery = [
@@ -228,25 +278,25 @@ submitted:boolean = false;
       text: 'Recruitment Drive for for 2019-2020 pass out (BE/B.TECH on Computer ...',
     },
     {
-      eventDate: '07',
+      eventDate: '12',
       monthYear: 'DEC,2019',
-      title: 'INFOSYS 2019-2020',
+      title: 'WIPRO 2018-2020',
+      link: '',
+      text: 'Recruitment Drive for for 2018-2020 pass out (BE/B.TECH on Computer ...',
+    },
+    {
+      eventDate: '29',
+      monthYear: 'OCT,2019',
+      title: 'ATC 2019-2020',
       link: '',
       text: 'Recruitment Drive for for 2019-2020 pass out (BE/B.TECH on Computer ...',
     },
     {
-      eventDate: '07',
-      monthYear: 'DEC,2019',
-      title: 'INFOSYS 2019-2020',
+      eventDate: '18',
+      monthYear: 'NOV,2019',
+      title: 'CSC 2017-2020',
       link: '',
-      text: 'Recruitment Drive for for 2019-2020 pass out (BE/B.TECH on Computer ...',
-    },
-    {
-      eventDate: '07',
-      monthYear: 'DEC,2019',
-      title: 'INFOSYS 2019-2020',
-      link: '',
-      text: 'Recruitment Drive for for 2019-2020 pass out (BE/B.TECH on Computer ...',
+      text: 'Recruitment Drive for for 2017-2020 pass out (BE/B.TECH on Computer ...',
     },
   ]
 
@@ -293,28 +343,56 @@ submitted:boolean = false;
         imgUrl: 'assets/images/partners/siemens.png'
       },
     ],
+    [
+      {
+        imgUrl: 'assets/images/partners/amex.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/fractal.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/exl.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/wns.png'
+      },
+    ],
+    [
+      {
+        imgUrl: 'assets/images/partners/boa.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/axis.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/exl.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/wns.png'
+      },
+    ],
   ]
   ngOnInit(): void {
-    this.validation();
+    // this.validation();
   }
 
 
 
 
+  //comented by krish, I am using contact form component
 
+  // validation(){
+  //   this.contactForm = this._fb.group({
+  //     name:['',Validators.required],
+  //     email:['',Validators.compose([Validators.email, Validators.required])],
+  //     contact:['',Validators.required],
+  //     course:['',Validators.required],
+  //     message:[''],
+  //   })
+  // }
 
-  validation(){
-    this.contactForm = this._fb.group({
-      name:['',Validators.required],
-      email:['',Validators.compose([Validators.email, Validators.required])],
-      contact:['',Validators.required],
-      course:['',Validators.required],
-      message:[''],
-    })
-  }
-
-  submit(){
-    this.submitted = true;
-  }
+  // submit(){
+  //   this.submitted = true;
+  // }
 
 }

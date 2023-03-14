@@ -12,6 +12,7 @@ import { CareerComponent } from './components/career/career.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PlacementComponent,
     CareerComponent,
     FaqComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
