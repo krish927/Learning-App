@@ -1,0 +1,19 @@
+.address-bar{
+    background-color: #002147;
+    padding-block: 10px;
+}
+.add-link{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 0;
+}
+
+i{
+    color: white;
+    margin-right: 5px;
+}

@@ -1,0 +1,53 @@
+.section1{
+    background: #002147;
+    color: white;
+    padding: 40px 0px;
+}
+.section2{
+    background: #f36b3b;
+    color: white;
+    padding: 40px 0px;
+}
+.section3{
+    background: #002147;
+    color: white;
+}
+.section4{
+    background: #01172f;
+}
+
+.section-img, .section-btn, .section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.section-content{
+    h4{
+        text-align: left;
+        width: 100%;
+    }
+    p{
+        text-align: left;
+        width: 100%;
+    }
+    
+}
+ 
+.section-btn button {
+    color: white;
+    border: 1px solid white;
+    background: none;
+}
+
+
+.c-text{
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    padding: 10px;
+    color: #adadad;
+    font-size: 13px;
+    margin: 0;
+}
