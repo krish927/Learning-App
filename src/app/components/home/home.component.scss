@@ -5,13 +5,15 @@
     height: 50px;
     width: 50px;
 }
-.home-service, .home-cources, .about-us{
+.home-service, .home-cources, .about-us, .placement{
     padding-bottom: 5%;
 }
 .section-heading{
     padding-block: 5%;
 }
-
+.placement{
+    padding-top: 5%;
+}
 .section-heading h1{
     font-size: 36px;
     line-height: 40px;
@@ -68,7 +70,7 @@
     z-index: 1;
     text-transform: uppercase;
 }
-.home-cources{
+.home-cources,.about-us{
     background: #f5f5f5;
 }
 
@@ -216,4 +218,50 @@
     border: 1px solid #02294e;
     // margin-top: 10px;
 }
-    
+.partners-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.partners-logo img{
+    width: 100%;
+}
+
+.our-placement{
+    background: url('../../../assets/images/our-placement.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.our-placement::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(3, 41, 79, 0.82), rgba(6, 53, 98, 0.62));
+}
+
+.placement-head-content{
+    position: relative;
+}
+
+.placement-head-content h4{
+    color: #fff;
+    font-size: 22px;
+    padding-bottom: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.placement-head-content p{
+    color: #e2e2e2;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}

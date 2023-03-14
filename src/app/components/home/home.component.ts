@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
       bannerUrl: ''
     },
     {
-      imgUrl: 'assets/images/trainingbanne4.jpeg',
+      imgUrl: 'assets/images/trainingbanner4.jpeg',
       bannerUrl: ''
     },
   ]
@@ -244,6 +244,51 @@ export class HomeComponent implements OnInit {
       link: '',
       text: 'Recruitment Drive for for 2019-2020 pass out (BE/B.TECH on Computer ...',
     },
+  ]
+
+  partners = [
+    [
+      {
+        imgUrl: 'assets/images/partners/deo.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/infosys.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/ibm.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/snap.png'
+      },
+    ],
+    [
+      {
+        imgUrl: 'assets/images/partners/niit.jpg'
+      },
+      {
+        imgUrl: 'assets/images/partners/tcs.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/tech.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/aon.png'
+      },
+    ],
+    [
+      {
+        imgUrl: 'assets/images/partners/ace.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/adobe.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/wipro.png'
+      },
+      {
+        imgUrl: 'assets/images/partners/siemens.png'
+      },
+    ],
   ]
   ngOnInit(): void {
   }
