@@ -75,6 +75,47 @@
     </div>
 </section>
 
+<section class="placement">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="our-placement">
+                        <div class="placement-head-content">
+                            <h4>Our Placement Partner</h4>
+                            <p>100% Placement Assistance</p>
+                        </div>
+
+                    </div>
+                </div>
+                <ng-container *ngFor="let partner of partners">
+                    <div class="row">
+                        <ng-container *ngFor="let item of partner">
+                            <div class="col-md-3  partners-logo">
+                                <div class="partners-logo">
+                                    <img src={{item.imgUrl}} alt="partners-logo">
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </ng-container>
+            </div>
+           
+            <div class="col-md-4">
+                <div class="row">
+                    <!-- <div class="our-placement">
+                        <div class="placement-head-content">
+                            <h4>Register Now</h4>
+                            <p>Create your free account now and get immediate access to 100s of online course</p>
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="about-us">
     <div class="container">
         <div class="row">

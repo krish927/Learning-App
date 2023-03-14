@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 2%;
+}
+.content-heading h2{
+text-transform: uppercase;
+font-size: 32px;
+color: #ffffff;
+font-weight: 700;
+letter-spacing: -1px;
+/* color: #ffbaa5; */
+margin-top: 0px;
+margin-bottom: 25px;
+text-shadow: 0px 1px #fff, 0px -1px #262F33;
+line-height: 60px;
+text-align: center;
+}
+.contact-content ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 5%;
+}
+
+.contact-content ul li{
+    font-weight: 700;
+    color: #8d969e;
+    line-height: 32px;
+    display: inline-block;
+    padding: 4px 10px 4px 10px;
+    border: 1px solid #374450;
+    background: #1f3c58;
+}

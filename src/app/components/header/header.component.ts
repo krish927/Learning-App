@@ -27,15 +27,15 @@ export class HeaderComponent implements OnInit {
     },
     {
       title: 'Placement Assistance',
-      link: ''
+      link: '/placement'
     },
     {
       title: 'Career',
-      link: ''
+      link: '/career'
     },
     {
       title: 'FAQs',
-      link: ''
+      link: '/faqs'
     },
     {
       title: 'Blog',
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
     },
     {
       title: 'Contact us',
-      link: ''
+      link: '/contact-us'
     },
   ]
   ngOnInit(): void {
