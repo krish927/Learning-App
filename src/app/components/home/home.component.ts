@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  contactForm:FormGroup;
+submitted:boolean = false;
+  constructor(private _fb:FormBuilder) { }
+  
   carouselItem = [
     {
       imgUrl: 'assets/images/welcomebanner.jpeg',
@@ -291,6 +295,26 @@ export class HomeComponent implements OnInit {
     ],
   ]
   ngOnInit(): void {
+    this.validation();
+  }
+
+
+
+
+
+
+  validation(){
+    this.contactForm = this._fb.group({
+      name:['',Validators.required],
+      email:['',Validators.compose([Validators.email, Validators.required])],
+      contact:['',Validators.required],
+      course:['',Validators.required],
+      message:[''],
+    })
+  }
+
+  submit(){
+    this.submitted = true;
   }
 
 }

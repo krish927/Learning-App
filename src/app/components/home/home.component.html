@@ -18,7 +18,7 @@
     </div>
 </section>
 
-<section class="home-service">
+<section class="home-service" id="services">
     <div class="container">
         <div class="row">
             <div class="section-heading">
@@ -42,7 +42,7 @@
     </div>
 </section>
 
-<section class="home-cources">
+<section class="home-cources" id="training">
     <div class="container">
         <div class="row">
             <div class="section-heading">
@@ -75,10 +75,10 @@
     </div>
 </section>
 
-<section class="placement">
+<section class="placement" id="placement">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="row">
                     <div class="our-placement">
                         <div class="placement-head-content">
@@ -89,13 +89,14 @@
                     </div>
                 </div>
                 <ng-container *ngFor="let partner of partners">
-                    <div class="row">
-                        <ng-container *ngFor="let item of partner">
-                            <div class="col-md-3  partners-logo">
+                    <div class="row" style="margin-block:5%;">
+                        <ng-container *ngFor="let item of partner;let i=index">
+                            <div class="col-md-2  partners-logo">
                                 <div class="partners-logo">
                                     <img src={{item.imgUrl}} alt="partners-logo">
                                 </div>
                             </div>
+                            <div class="col-md-1"></div>
                         </ng-container>
                     </div>
                 </ng-container>
@@ -116,7 +117,69 @@
     </div>
 </section>
 
-<section class="about-us">
+
+<!-- **************************************  Code for the Contact us form  **************************************  -->
+
+<section class="placement" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="our-placement">
+                        <div class="placement-head-content">
+                            <h4>Feel free to contact us in case of any query/Suggestion</h4>
+                            <p>100% Placement Assistance</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <form [formGroup]="contactForm">
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your name" formControlName="name">
+                        <p class="error" *ngIf="contactForm.get('name').hasError('required') && (contactForm.get('name').touched || submitted)">* Name is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your email" formControlName="email">
+                        <p class="error" *ngIf="contactForm.get('email').hasError('required') && (contactForm.get('email').touched || submitted)">* Email is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your contact" formControlName="contact">
+                        <p class="error" *ngIf="contactForm.get('contact').hasError('required') && (contactForm.get('contact').touched || submitted)">* Name is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your course" formControlName="course">
+                        <p class="error" *ngIf="contactForm.get('course').hasError('required') && (contactForm.get('course').touched || submitted)">* Name is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your message" formControlName="message">
+                        <!-- <p class="error" *ngIf="contactForm.get('name').hasError('required') && (contactForm.get('name').touched || submitted)">* Name is required</p> -->
+                    </div>
+                    <div class="submitBtn">
+                        <button type="button" (click)="submit()">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+           
+            <div class="col-md-4">
+                <div class="row">
+                    <!-- <div class="our-placement">
+                        <div class="placement-head-content">
+                            <h4>Register Now</h4>
+                            <p>Create your free account now and get immediate access to 100s of online course</p>
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- **************************************  Contact us code ends here  **************************************   -->
+
+<section class="about-us" id="about">
     <div class="container">
         <div class="row">
             <div class="section-heading">
@@ -145,8 +208,8 @@
                     <p class="title-area-title">WHO WE ARE</p>
                 </div>
                 <div class="second-container">
-                    <p class="title-area-title">POWER MIND TECHNOLOGIES</p>
-                    <p class="normal-text">Power Mind Technologies (PMT) is a leading global consulting and technology Services Company specialized in industry specific solutions & integration and conducts Vocational, Corporate and comprehensive technical IT training to the professionals on leading IT Technologies since 2014.</p>
+                    <p class="title-area-title">Palin Analytics</p>
+                    <p class="normal-text">Palin Analytics is a leading global consulting and technology Services Company specialized in industry specific solutions & integration and conducts Vocational, Corporate and comprehensive technical IT training to the professionals on leading IT Technologies since 2014.</p>
                     <p class="normal-text">We conduct various training for working IT/ITES/Non-IT professionals so that they can enhance their skills through our various value added training programs.</p>
                     <button class="btn extra">Know More...</button>
                 </div>
@@ -174,7 +237,7 @@
     </div>
 </section>
 
-<section class="home-service">
+<section class="home-service" id="blog">
     <div class="container">
         <div class="row">
             <div class="section-heading">

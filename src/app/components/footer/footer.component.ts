@@ -12,4 +12,9 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  scroll(){
+    const contact = document.getElementById('contact')
+    contact.scrollIntoView({behavior:'smooth'})
+  }
 }

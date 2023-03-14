@@ -11,42 +11,57 @@ export class HeaderComponent implements OnInit {
   navLinks = [
     {
       title: 'Home',
-      link: ''
+      link: '',
+      target:'home'
     },
     {
       title: 'Training Program',
-      link: ''
+      link: '',
+      target:'training'
     },
     {
       title: 'Why us',
-      link: '/about-us'
+      link: '/about-us',
+      target:'about'
     },
     {
       title: 'Services',
-      link: ''
+      link: '',
+      target:'services'
     },
     {
       title: 'Placement Assistance',
-      link: '/placement'
+      link: '/placement',
+      target:'placement'
     },
     {
       title: 'Career',
-      link: '/career'
+      link: '/career',
+       target: 'career'
     },
     {
       title: 'FAQs',
-      link: '/faqs'
+      link: '/faqs',
+      target: 'faq'
     },
     {
       title: 'Blog',
-      link: ''
+      link: '',
+      target:'blog'
     },
     {
       title: 'Contact us',
-      link: '/contact-us'
+      link: '/contact-us',
+      target: 'contact'
     },
   ]
   ngOnInit(): void {
   }
 
+
+  scroll(target:any){
+    const element = document.getElementById(target)
+    element ? element.scrollIntoView({behavior:'smooth'}) : console.log("Element not found")
+
+  }
 }
