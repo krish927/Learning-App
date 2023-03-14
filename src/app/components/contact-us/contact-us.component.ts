@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-
-  constructor() { }
+contactForm:FormGroup;
+submitted:boolean = false;
+  constructor(private _fb:FormBuilder) { }
 
   ngOnInit(): void {
+    this.validation();
+  }
+
+  validation(){
+    this.contactForm = this._fb.group({
+      name:['',Validators.required],
+      email:['',Validators.compose([Validators.email, Validators.required])],
+      contact:['',Validators.required],
+      course:['',Validators.required],
+      message:[''],
+    })
+  }
+
+  submit(){
+    this.submitted = true;
   }
 
 }

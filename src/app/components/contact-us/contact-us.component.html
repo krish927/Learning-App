@@ -48,7 +48,31 @@
                 
             </div>
             <div class="col-md-5">
-
+                <form [formGroup]="contactForm">
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your name" formControlName="name">
+                        <p class="error" *ngIf="contactForm.get('name').hasError('required') && (contactForm.get('name').touched || submitted)">* Name is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your email" formControlName="email">
+                        <p class="error" *ngIf="contactForm.get('email').hasError('required') && (contactForm.get('email').touched || submitted)">* Email is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your contact" formControlName="contact">
+                        <p class="error" *ngIf="contactForm.get('contact').hasError('required') && (contactForm.get('contact').touched || submitted)">* Name is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your course" formControlName="course">
+                        <p class="error" *ngIf="contactForm.get('course').hasError('required') && (contactForm.get('course').touched || submitted)">* Name is required</p>
+                    </div>
+                    <div class="formGroup">
+                        <input type="text" placeholder="Enter your message" formControlName="message">
+                        <!-- <p class="error" *ngIf="contactForm.get('name').hasError('required') && (contactForm.get('name').touched || submitted)">* Name is required</p> -->
+                    </div>
+                    <div class="submitBtn">
+                        <button type="button" (click)="submit()">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

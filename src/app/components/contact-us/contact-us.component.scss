@@ -1,3 +1,6 @@
+
+$error: rgb(255,0,51);
+
 .main{
     display: flex;
     flex-direction: column;
@@ -35,4 +38,19 @@ text-align: center;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+}
+
+
+
+
+// CSS for the error message 
+.formGroup{
+    position: relative;
+}
+.error{
+    color: $error;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 90%;
+    left: 15%;
 }
